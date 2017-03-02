@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app='app'>
+<html>
 
 <head lang="en-us">
     <title>Introduction to JavaScript - Home</title>
@@ -9,7 +9,7 @@
     <link href="styles/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body ng-controller="recipesCtrl">
+<body>
     <header class="page-header">
         <h1>HTML5, CSS3, and JavaScript <small>Programming</small></h1>
     </header>
@@ -47,25 +47,49 @@
     </nav>
 
     <main class="container">
-        <h2>{{recipe.name }}</h2>
-        <form>
-            <label for="name">Recipe</label>
-            <input type="text" name="name" ng-model="recipe.name">
-            <br>
-            <label for= "description">
-            <textarea name=description ng-model="recipe.description"></textarea>
-            </form>
-        <ul>
-            <li ng-repeat='recipe in recipes'> {{ recipe }}</li></ul>
-<input ng-model="Message">
-<p ng-bind="Message"></p>
+        <form method="GET" action="">
+            <fieldset>
+                <legend>Some Controls</legend>
+                <label for="sometxt">Write Some Text</label>
+                <input type="text" name="sometext">
+                <hr>
+                <label for="birthday">
+                 <input type="date" name "birthday">
+                 </fieldset>
+                 <hr>
+                <label for="state">Select a State</label>
+                <select name="state">
+                    <option value="NC">North Carolina</option>
+                    <option value="GA">Georgia</option>
+               
+                </select>
+                <hr>
+                <label for="largeText"> Write some large text</label>
+                <textarea name="largeText" rows="5" cols="100"></textarea>
+                <hr>
+                <input type="radio" name="Gender" value="M" checked="checked">Male
+                <input type="radio" name="Gender" value="F">Female
+                <input type="radio" name="Gender" value="O">Other
+                <hr>
+                <label for="internet">Internet</label>
+                <input type="checkbox" name="internet">
+                <label for="sports">Sports</label>
+                <input type="checkbox" name="sporta">
+                <label for="movies">Movies</label>
+                <input type="checkbox" name="movies">
+                <input type="hidden" name="secret">
+                <hr>
+                <label for="file"> Upload file</label>
+                <button type="submit"> Submit Data </button>
+                
 
-        <p> 1 + 3 = {{ 1 + 3 }} </p>
+
+        </form>
     </main>
 
     <footer class="container-fluid well">
         <ul>
-            <li>{{ 1 + 3 }}</li>
+            <li></li>
             <li><a href="www.cpcc.edu">CPCC</a></li>
             <li></li>
             <li><a herf="http://www.cpcc.edu/computertraining">Computer Technology Institute</a></li>
@@ -78,8 +102,6 @@
 
     <script src="lib/jquery/dist/jquery.min.js" type="text/javascript"></script>
     <script src="lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="lib/angular/angular.min.js" type="text/javascript"></script>
-    <script src="scripts/angular1.js" type="text/javascript"> </script> 
 </body>
 
 </html>
